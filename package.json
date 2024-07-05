@@ -1,0 +1,32 @@
+{
+  "name": "pokedex",
+  "version": "1.0.1",
+  "keywords": [
+    "cells-app"
+  ],
+  "scripts": {
+    "clean": "yarn clean:caches && yarn clean:deps",
+    "clean:caches": "npm cache clean --force",
+    "clean:deps": "rm -rf node_modules && rm -rf package-lock.json && rm -rf dist",
+    "start": "cells app:serve -c devinter.js",
+    "reinstart": "rm -rf node_modules/@pipeline && npm i && cells app:serve -c dev.js"
+  },
+  "dependencies": {
+    "@cells-components/cells-i18n-mixin": "^1.5.0",
+    "@cells/cells-bridge": "^3.19.0",
+    "@cells/cells-element": "^1.5.0",
+    "@cells/cells-page": "^1.5.0",
+    "@open-wc/lit-helpers": "^0.3.0",
+    "@webcomponents/webcomponentsjs": "^2.5.0",
+    "cells-app-template": "^6.0.0",
+    "lit": "^2.0.0"
+  },
+  "devDependencies": {
+    "@cells/cells-component-core": "^3.1.0"
+  },
+  "resolutions": {
+    "lit-element": "2.5.1",
+    "lit-html": "1.4.1"
+  }
+}
+
